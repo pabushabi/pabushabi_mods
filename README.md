@@ -26,6 +26,7 @@
 - Отключён розыгрыш / raffle-информер
 - Отключена аналитика (`WBAnalytics`)
 - GMS / Play Services проверки обнулены
+- VPN-блокер выключен (оверлей / QR); fingerprint `VpnApps` уходит пустым
 - Signature killer
 - `versionCode` завышен
 - Чистка лишних ресурсов (оставлен xxhdpi)
@@ -95,6 +96,40 @@
 
 </details>
 
+---
+
+## Яндекс Маркет
+
+<p>
+  <strong>Яндекс Маркет</strong><br />
+  Версия мода: <code>2026.38.4</code><br />
+  Варианты: обычный · black (AMOLED) · клон
+</p>
+
+<details>
+<summary><strong>Что изменено</strong></summary>
+
+- Сняты баннеры морды и flex/Adfox/UrbanAds-экшены
+- Скрыт `UrbanAdsView` (рекламный SDK)
+- Отключена аналитика (AppMetrica / Adjust / Baobab / Firebase → localhost)
+- Экран принудительного обновления закрывается сразу
+- Оптимизация графики (xxhdpi), signature killer, завышенный `versionCode`
+- **Клон:** `ru.beru.android.clone` рядом со стоком (`com.yandex.passport.clone`)
+
+</details>
+
+<details>
+<summary><strong>Загрузки (GitHub Releases)</strong></summary>
+
+
+| Вариант | arm64-v8a | armeabi-v7a |
+|---------|-----------|-------------|
+| Обычный | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_mod_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_mod_armeabi-v7a.apk) |
+| Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_clone_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_clone_armeabi-v7a.apk) |
+
+Все ассеты тега: [market-2026.38.4](https://github.com/pabushabi/pabushabi_mods/releases/tag/market-2026.38.4)
+
+</details>
 
 ---
 
