@@ -1,10 +1,10 @@
 # Android Mods
 
-Неофициальные модифицированные APK для маркетплейсов.
+Неофициальные модифицированные APK.
 
 > **Важно.** Моды не связаны с правообладателями приложений. Установка только на свой риск: возможны баны аккаунта, нестабильность, проблемы с обновлениями. Скачивайте APK только из [Releases](../../releases) этого репозитория.
 
-Поддерживаемые ABI: **arm64-v8a** (большинство устройств) и **armeabi-v7a** (старые 32-bit).
+Поддерживаемые ABI: **arm64-v8a** (большинство устройств) и **armeabi-v7a** (старые 32-bit). Ozon и Дикси собраны только под arm64-v8a: в исходных бандлах нет 32-bit библиотек.
 
 ---
 
@@ -56,7 +56,7 @@
 <p>
   <img src="assets/icons/avito.png" alt="Avito" width="72" height="72" align="left" style="margin-right:16px" />
   <strong>Avito</strong><br />
-  Версия мода: <code>236.1</code><br />
+  Версия мода: <code>237.5</code><br />
   Варианты: обычный · black (AMOLED) · клон
 </p>
 
@@ -65,16 +65,16 @@
 <details>
 <summary><strong>Что изменено</strong></summary>
 
-- Отключена реклама (layouts + `loadAd` / native ad)
-- Убраны пустые чёрные блоки после скрытия рекламы
-- Отключена аналитика (AppMetrica / Adjust / GMS / Firebase → localhost)
+- Отключена реклама (layouts + `loadAd` / native ad + skip SERP)
+- Убраны пустые чёрные блоки после скрытия рекламы (hero hide без early return)
+- Отключена аналитика (AppMetrica / Adjust / GMS / Crashlytics → localhost; FCM Installations жив)
 - Скрыта карусель сторисов
 - Плашки заголовка в один ряд
 - Скрыта кнопка Ави ИИ
 - Скрыты mini menu / короткие видео
 - Скрыт «Портал призов» в профиле
 - Скрыт блок «Может быть интересно»
-- Убраны всплывающие bottom sheets при запуске (force update, beduin, уведомления)
+- Убраны startup sheets (force update + onboarding; Beduin product sheets не трогаем)
 - Оптимизация графики (xxhdpi), сжатие dex
 - Signature killer, завышенный `versionCode`
 - **Black:** AMOLED-тема (`#000000`)
@@ -88,11 +88,11 @@
 
 | Вариант | arm64-v8a | armeabi-v7a |
 |---------|-----------|-------------|
-| Обычный | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_mod_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_mod_armeabi-v7a.apk) |
-| Black | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_black_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_black_armeabi-v7a.apk) |
-| Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_clone_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-236.1/avito_236.1_clone_armeabi-v7a.apk) |
+| Обычный | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_mod_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_mod_armeabi-v7a.apk) |
+| Black | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_black_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_black_armeabi-v7a.apk) |
+| Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_clone_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/avito-237.5/avito_237.5_clone_armeabi-v7a.apk) |
 
-Все ассеты тега: [avito-236.1](https://github.com/pabushabi/pabushabi_mods/releases/tag/avito-236.1)
+Все ассеты тега: [avito-237.5](https://github.com/pabushabi/pabushabi_mods/releases/tag/avito-237.5)
 
 </details>
 
@@ -128,6 +128,82 @@
 | Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_clone_arm64-v8a.apk) | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/market-2026.38.4/market_2026.38.4_clone_armeabi-v7a.apk) |
 
 Все ассеты тега: [market-2026.38.4](https://github.com/pabushabi/pabushabi_mods/releases/tag/market-2026.38.4)
+
+</details>
+
+---
+
+## Ozon
+
+<p>
+  <img src="assets/icons/ozon.png" alt="Ozon" width="72" height="72" align="left" style="margin-right:16px" />
+  <strong>Ozon</strong><br />
+  Версия мода: <code>19.42.0</code><br />
+  Варианты: обычный · black (AMOLED) · клон<br />
+  Только <code>arm64-v8a</code>
+</p>
+
+<br clear="all" />
+
+<details>
+<summary><strong>Что изменено</strong></summary>
+
+- Отключена аналитика (AppsFlyer / Firebase Installations / pagead → localhost)
+- Оптимизация графики (xxhdpi)
+- Signature killer, завышенный `versionCode`
+- **Black:** ночная тема и тёмные поверхности `#000000`
+- **Клон:** `ru.ozon.app.android.clone` рядом со стоком, свой account type Ozon ID
+
+</details>
+
+<details>
+<summary><strong>Загрузки (GitHub Releases)</strong></summary>
+
+
+| Вариант | arm64-v8a |
+|---------|-----------|
+| Обычный | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/ozon-19.42.0/ozon_19.42.0_mod_arm64-v8a.apk) |
+| Black | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/ozon-19.42.0/ozon_19.42.0_black_arm64-v8a.apk) |
+| Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/ozon-19.42.0/ozon_19.42.0_clone_arm64-v8a.apk) |
+
+Все ассеты тега: [ozon-19.42.0](https://github.com/pabushabi/pabushabi_mods/releases/tag/ozon-19.42.0)
+
+</details>
+
+---
+
+## Дикси
+
+<p>
+  <strong>Дикси</strong><br />
+  Версия мода: <code>4.16.0</code><br />
+  Варианты: обычный · black · клон<br />
+  Только <code>arm64-v8a</code>
+</p>
+
+<details>
+<summary><strong>Что изменено</strong></summary>
+
+- Приложение на Flutter: баннеры, сторис и рекламные виджеты отключены в Dart-снапшоте
+- Отключена аналитика (AppMetrica / Gravity Field / Diginetica / Crashlytics / Firebase Installations → localhost)
+- Оптимизация графики (xxhdpi)
+- Signature killer, завышенный `versionCode`
+- **Black:** чёрные сплэш и системное окно, ночной `uiMode`. Цвета самого Flutter-интерфейса не перекрашиваются
+- **Клон:** `com.ru.dixy.clone` рядом со стоком
+
+</details>
+
+<details>
+<summary><strong>Загрузки (GitHub Releases)</strong></summary>
+
+
+| Вариант | arm64-v8a |
+|---------|-----------|
+| Обычный | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/dixy-4.16.0/dixy_4.16.0_mod_arm64-v8a.apk) |
+| Black | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/dixy-4.16.0/dixy_4.16.0_black_arm64-v8a.apk) |
+| Клон | [скачать](https://github.com/pabushabi/pabushabi_mods/releases/download/dixy-4.16.0/dixy_4.16.0_clone_arm64-v8a.apk) |
+
+Все ассеты тега: [dixy-4.16.0](https://github.com/pabushabi/pabushabi_mods/releases/tag/dixy-4.16.0)
 
 </details>
 
